@@ -1,0 +1,6 @@
+code: entando-strapi-bundle
+description: Entando Strapi bundle
+components:
+  plugins:
+    - plugins/entando-strapi-plugin.yaml
+
