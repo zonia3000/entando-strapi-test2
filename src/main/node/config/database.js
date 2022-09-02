@@ -23,6 +23,7 @@ module.exports = ({ env }) => ({
       host: env('DATABASE_HOST', dbHost),
       port: env.int('DATABASE_PORT', dbPort),
       database: env('DATABASE_NAME', dbName),
+      schema: env('DATABASE_NAME', 'public'),
       user: env('DATABASE_USERNAME', process.env.SPRING_DATASOURCE_USERNAME),
       password: env('DATABASE_PASSWORD', process.env.SPRING_DATASOURCE_PASSWORD),
       ssl: env.bool('DATABASE_SSL', false),
