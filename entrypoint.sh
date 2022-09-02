@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # First time start initialization
-if [ ! -f "/entando-data/entando-strapi" ]; then
+if [ ! -f "/entando-data/entando-strapi/build_id" ] ||  [ "$(cat /entando-strapi/build_id)" -gt "$(cat /entando-data/entando-strapi/build_id)" ]; then
     cp -R /entando-strapi /entando-data
 fi
 

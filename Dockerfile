@@ -22,6 +22,8 @@ COPY strapi.conf .
 COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 
+RUN echo $(date +%s) > /entando-strapi/build_id
+
 VOLUME /entando-data
 WORKDIR /entando-data/entando-strapi
 ENTRYPOINT /entando-strapi/entrypoint.sh
